@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIML Part B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4 ">
+    <div class="text-black flex justify-evenly py-3 fixed top-0 left-0 w-full shadow-md z-50 border border-gray-300"
+        style="background-color: #F5F2E0;">
+        <a href="/home.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-book text-2xl"></i>
+            <span class="text-xl">Documentation</span>
+        </a>
+        <a href="/location.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-location-dot text-2xl"></i>
+            <span class="text-xl">Location Analysis</span>
+        </a>
+        <a href="/promotion.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-magnifying-glass-dollar text-2xl"></i>
+            <span class="text-xl">Promotion Analysis</span>
+        </a>
+    </div>
+
+    <div class="w-full mx-auto bg-gray-700 text-white border border-gray-200 rounded-lg shadow-lg mt-[100px]">
+        <div class="p-6">
+            <h2 class="text-2xl font-semibold text-gray-100 mb-4">1. EDA</h2>
+            <hr class="h-px my-8 bg-white border-0 ">
+            <p class="text-gray-100 text-base mb-4 font-bold">Information about the dataset</p>
+            The promotions dataset has the following attributes:
+            <ul class="list-decimal pl-6">
+
+                <li>PROMOTION_START_DATE</li>
+                <li>PROMOTION_END_DATE</li>
+                <li>PROMOTION_TYPE</li>
+                <li>PROMOTION_OFFER</li>
+                <li>PROMOTION_ITEM</li>
+                <li>PROMOTION_CASH_AMOUNT</li>
+                <li>PROMOTION_PERCENTAGE</li>
+                <li>PLATFORM</li>
+                <li>FREQUENCY</li>
+                <li>PROMOTION_COVERAGE</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">Promotion Item Clasification of
+        "NET_SALES_FINAL_USD_AMOUNT" and "TRANSACTION_FINAL_COUNT"</h2>
+    <div class="text-center w-full">
+        <img src="other_images/item_platform.png" alt="Image 2" class="w-full h-400 object-cover rounded-lg shadow-md">
+        <p class="mt-2 text-gray-700">"NET_SALES_FINAL_USD_AMOUNT" and "TRANSACTION_FINAL_COUNT"</p>
+    </div>
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">Promotion Item Clasification of Change In
+        "NET_SALES_FINAL_USD_AMOUNT" and "TRANSACTION_FINAL_COUNT"</h2>
+    <div class="text-center w-full ">
+        <img src="other_images/item_platform_change.png" alt="Image 2"
+            class="w-full h-400 object-cover rounded-lg shadow-md">
+        <p class="mt-2 text-gray-700">Change in "NET_SALES_FINAL_USD_AMOUNT" and "TRANSACTION_FINAL_COUNT"</p>
+    </div>
+    <br>
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">Promotional Activities
+        and Their Impact</h2>
+
+
+    <div class="w-full mx-auto bg-gray-700 text-white border border-gray-200 rounded-lg shadow-lg  p-10" style="
+        padding: 10px;">
+        <p>
+
+            <b>1. Overview of Promotions</b>
+            <li>Promotions are time-bound with specified start and end dates, targeting specific sales periods.</li>
+            <li>Campaigns are executed on platforms such as "DD", potentially representing digital or delivery channels.
+            </li>
+
+            <br>
+
+            <b>2. Influence on Sales and Transactions</b>
+            <li>Increased transaction volume is observed during promotional periods, reflecting customer responsiveness.
+            </li>
+            <li>Sustained or ongoing promotions (with no explicit end dates) may indicate long-term strategies to retain
+                customer
+                loyalty and maintain steady sales.</li>
+
+
+            <br>
+
+            <b>3. Key Metrics to Evaluate Promotional Impact</b>
+            <li>Sales Uplift: Assess the additional revenue generated during promotional periods compared to
+                non-promotional
+                periods.</li>
+            <li>Transaction Volume Growth: Measure changes in the number of transactions attributed to promotions.</li>
+            <li>Promotion Duration Effectiveness: Analyze whether short-term or long-term campaigns yield better
+                results.
+            </li>
+
+            <br>
+
+
+            <b>4. Strategic Insights and Recommendations</b>
+            <li>Identify high-impact promotions that consistently drive sales and repeat transactions.</li>
+            <li>Use customer behavior trends to refine offerings and design targeted campaigns that maximize engagement.
+            </li>
+            <br>
+
+            <b>5. Planning Future Promotions</b>
+            <li>Personalized Promotions: Use customer data to design campaigns tailored to specific demographics or
+                preferences.</li>
+            <li>Cross-Channel Promotion Strategies: Combine digital platforms and in-store promotions for wider reach
+                and
+                impact.</li>
+            <li>Leverage predictive analytics to anticipate demand and optimize timing for future campaigns.</li>
+        </p>
+    </div>
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">Actual vs Predicted Sales with Promotions for
+        2000 data points
+    </h2>
+
+    <div class="flex flex-col items-center justify-center w-full m:w-2/3 md:w-2/3 lg:w-2/3 p-2 mx-auto">
+        <img src="other_images/promotion_5000.jpeg" alt="Image 2"
+            class="w-full h-400 object-cover rounded-lg shadow-md">
+        <p class="mt-2 text-gray-700 text-center">Actual vs Predicted Sales with Promotions for 2000 data points</p>
+    </div>
+
+
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">Actual vs Predicted Sales with Promotions for
+        5000 data points
+    </h2>
+    <div class="flex flex-col items-center justify-center w-full m:w-2/3 md:w-2/3 lg:w-2/3 p-2 mx-auto">
+        <img src="other_images/promotion_2000.png" alt="Image 2" class="w-full h-400 object-cover rounded-lg shadow-md">
+        <p class="mt-2 text-gray-700 text-center">Actual vs Predicted Sales with Promotions for 5000 data points</p>
+    </div>
+</body>
+
+</html>

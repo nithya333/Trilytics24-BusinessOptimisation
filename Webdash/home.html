@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIML Part B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+    <div class="text-black flex justify-evenly py-3 fixed top-0 left-0 w-full shadow-md z-50 border border-gray-300"
+        style="background-color: #F5F2E0;">
+        <a href="/home.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-book text-2xl"></i>
+            <span class="text-xl">Documentation</span>
+        </a>
+        <a href="/location.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-location-dot text-2xl"></i>
+            <span class="text-xl">Location Analysis</span>
+        </a>
+        <a href="/promotion.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-magnifying-glass-dollar text-2xl"></i>
+            <span class="text-xl">Promotion Analysis</span>
+        </a>
+    </div>
+
+
+
+    <div class="max-w-7xl mx-auto px-6 py-12 mt-[60px]">
+        <!-- Header Section -->
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Unlock Enhanced Forecasting Capabilities Empowering Data-Driven Growth!
+            </h1>
+            <h2 class="text-2xl font-semibold text-gray-400">Our Solutions Specialize In</h2>
+        </div>
+
+        <!-- Solutions Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-8 text-white">
+
+            <!-- Card 3 -->
+            <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:bg-gray-700 flex items-start">
+                <i class="fas fa-map-marker-alt text-4xl text-red-500 mr-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Geographic Profit Analysis</h3>
+                <p class="text-gray-400">Uncover hidden opportunities by analyzing regional performance to maximize
+                    growth.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-gray-800 rounded-lg shadow-lg p-6 hover:bg-gray-700 flex items-start">
+                <i class="fas fa-bullhorn text-4xl text-yellow-500 mr-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Promotional Impact Insights</h3>
+                <p class="text-gray-400">Measure and capture the influence of promotions to drive public engagement and
+                    boost business outcomes.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="h-px my-8 bg-gray-800 border-0 dark:bg-gray-700">
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-4">We Start Here!
+        </h1>
+    </div>
+    <div class="w-full rounded overflow-hidden shadow-lg bg-gray-800 p-4">
+        <div class="flex justify-center items-center">
+            <!-- Left Column: Heading and Description -->
+            <div class="flex flex-col">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-database text-4xl text-blue-500" style="color: #F5F2E0;"></i>
+                    <h2 class="text-xl font-semibold text-white">Database Information</h2>
+                </div>
+                <p class="text-white text-sm mt-2">The dataset consists of 3 key tables with the following details:</p>
+            </div>
+
+            <!-- Right Column: Database Info in Table -->
+            <div class="px-6 py-4 ml-8 w-1/2">
+                <table class="min-w-full text-sm text-white ">
+                    <thead class="border-b">
+                        <tr>
+                            <th class="py-2 text-center border-r">Table</th>
+                            <th class="py-2 text-center">Records</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr class="border-b text-center">
+                            <td class="py-2 font-semibold border-r">Sales Data</td>
+                            <td class="py-2">632198 records</td>
+                        </tr>
+                        <tr class="border-b text-center">
+                            <td class="py-2 font-semibold border-r">Promotions Data</td>
+                            <td class="py-2">98 records</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="py-2 font-semibold border-r">Store Data</td>
+                            <td class="py-2">2452 records</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="space-y-4 pt-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="bg-gray-800 text-white font-semibold py-2 px-4">Sales Data</div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="p-2 text-left w-1/2">Variable Name</th>
+                                <th class="p-2 text-left w-1/2">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border p-2">STORE_KEY</td>
+                                <td class="border p-2">Unique identifier for a store</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">STORE_NUMBER</td>
+                                <td class="border p-2">Unique identifier for a store</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">OPEN_DATE</td>
+                                <td class="border p-2">The day on which the store opened</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">BUSINESS_DATE_KEY</td>
+                                <td class="border p-2">Sales transaction date</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">BUSINESS_DATE</td>
+                                <td class="border p-2">Same as above</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">TEMP_CLOSE_INDICATOR</td>
+                                <td class="border p-2">Flag to indicate if the store is closed on the business date</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROJECTION_INCLUDED_INDICATOR</td>
+                                <td class="border p-2">Flag to indicate projections are included</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">BUSINESS_DATE_FISCAL_DAY_OF_YEAR</td>
+                                <td class="border p-2">Fiscal day of year</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">BUSINESS_DATE_FISCAL_YEAR</td>
+                                <td class="border p-2">Fiscal year</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">COMP_BUSINESS_DATE_FISCAL_YEAR</td>
+                                <td class="border p-2">The date used to compare performance with the last year</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">COMPARABLE_INDICATOR</td>
+                                <td class="border p-2">Flag to indicate if the store was also open in the last year</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">TRANSACTION_FINAL_COUNT</td>
+                                <td class="border p-2">Number of transactions in the day</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">NET_SALES_FINAL_USD_AMOUNT</td>
+                                <td class="border p-2">Net Sales in USD</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PY_TRANSACTION_FINAL_COUNT</td>
+                                <td class="border p-2">Transactions in the last comparable fiscal date (PY = Previous
+                                    Year)</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PY_NET_SALES_FINAL_USD_AMOUNT</td>
+                                <td class="border p-2">Sales in the last comparable fiscal date (PY = Previous Year)
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="bg-gray-800 text-white font-semibold py-2 px-4">Promotions Data</div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="p-2 text-left w-1/2">Variable Name</th>
+                                <th class="p-2 text-left w-1/2">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border p-2">PROMOTION_START_DATE</td>
+                                <td class="border p-2">The date the promotion offer was started</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_END_DATE</td>
+                                <td class="border p-2">The date the promotion offer ended</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_TYPE</td>
+                                <td class="border p-2">Type of promotion</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_OFFER</td>
+                                <td class="border p-2">Promotion offer</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_ITEM</td>
+                                <td class="border p-2">Item included in the offer</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_CASH_AMOUNT</td>
+                                <td class="border p-2">Cash discount on item/total bill if applicable</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_PERCENTAGE</td>
+                                <td class="border p-2">Percentage of discount on item/total bill if applicable</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PLATFORM</td>
+                                <td class="border p-2">Platform used for promotion, e.g., DD is DoorDash, UE is UberEats
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">FREQUENCY</td>
+                                <td class="border p-2">Frequency of the offer</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_DAY_OF_WEEK</td>
+                                <td class="border p-2">Day of week</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_CHANNEL</td>
+                                <td class="border p-2">Promotion channel</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">PROMOTION_COVERAGE</td>
+                                <td class="border p-2">Promotion coverage</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">REGIONAL_COVERAGE</td>
+                                <td class="border p-2">Regional coverage</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow">
+            <div class="bg-gray-800 text-white font-semibold py-2 px-4">Store Data</div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="p-2 text-left w-1/2">Variable Name</th>
+                            <th class="p-2 text-left w-1/2">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border p-2">STORE_KEY</td>
+                            <td class="border p-2">Unique identifier for a store</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STORE_NUMBER</td>
+                            <td class="border p-2">Unique identifier for a store</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">ROW_EFFECTIVE_TIMESTAMP</td>
+                            <td class="border p-2">Timestamp when record was created in original table</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">ROW_EXPIRATION_TIMESTAMP</td>
+                            <td class="border p-2">Timestamp when record was created in original table</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STORE_NAME</td>
+                            <td class="border p-2">Name of the store</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STORE_TYPE_CODE</td>
+                            <td class="border p-2">Franchise or Corporate</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STORE_TYPE_NAME</td>
+                            <td class="border p-2">Franchise or Corporate</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">OPEN_DATE</td>
+                            <td class="border p-2">The date on which the store opened</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">CLOSE_DATE</td>
+                            <td class="border p-2">The date on which the store closed</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">CITY_NAME</td>
+                            <td class="border p-2">City in which the store is located</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STATE_CODE</td>
+                            <td class="border p-2">State Code</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STATE_NAME</td>
+                            <td class="border p-2">State in which the store is located</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">COUNTRY_CODE</td>
+                            <td class="border p-2">Country Code</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">COUNTRY_NAME</td>
+                            <td class="border p-2">Country in which the store is located</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">TIME_ZONE_NAME</td>
+                            <td class="border p-2">Time Zone</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">DMA_ID</td>
+                            <td class="border p-2">DMA ID</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">DMA_NAME</td>
+                            <td class="border p-2">DMA in which the store is located</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">ROYALTY_RATE</td>
+                            <td class="border p-2">Royalty rates if applicable</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STORE_STATUS</td>
+                            <td class="border p-2">Operational status of store</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">REGION_ID</td>
+                            <td class="border p-2">Region ID</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">REGION_NAME</td>
+                            <td class="border p-2">Region in which the store is located</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">PRIOR_STORE_NUMBER</td>
+                            <td class="border p-2">Prior Store Number</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STORE_LIVE_DATE</td>
+                            <td class="border p-2">Date on which the store went live</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">STORE_FUNCTIONAL_STATUS</td>
+                            <td class="border p-2">Functional status of store</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">GLOBAL_REGION_NAME</td>
+                            <td class="border p-2">Operating within US or internationally</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">GLOBAL_REGION_STORE_TYPE_NAME</td>
+                            <td class="border p-2">US or international Franchise</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">AREA_REGION</td>
+                            <td class="border p-2">Area in which the store is located</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">DISPATCH_GO_LIVE_DATE</td>
+                            <td class="border p-2">Date at which store associated with third party Dispatch</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">DOOR_DASH_GO_LIVE_DATE</td>
+                            <td class="border p-2">Date at which store associated with third party DoorDash</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">DOOR_DASH_MARKUP_GO_LIVE_DATE</td>
+                            <td class="border p-2">Date at which store associated with third party DoorDash</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">UBER_EATS_MARKUP_DATE</td>
+                            <td class="border p-2">Date at which store associated with third party UberEats</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">EDW_CREATE_TIMESTAMP</td>
+                            <td class="border p-2">Timestamp when record was created in this table</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2">EDW_MODIFY_TIMESTAMP</td>
+                            <td class="border p-2">Timestamp when record was modified in this table</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class=" mx-auto bg-gray-800 border border-gray-700 rounded-lg shadow mt-10 w-full">
+        <!-- Image Section -->
+        <img class="object-cover w-full h-full rounded-t-lg" src="other_images/ER_fin.png"
+            alt="Technology Acquisitions">
+
+        <!-- Content Section -->
+        <div class="p-6">
+            <h5 class="text-2xl font-bold text-gray-100 mb-4">From Raw to Fruitful: Preprocessing the Data</h5>
+            <p class="text-gray-400 leading-relaxed">
+                Our analysis includes <span class="font-semibold">Stores Info</span>, optimized to 413 records for
+                streamlined performance. The <span class="font-semibold">Per Day Sales</span> metric highlights the
+                economy of overall QSR operations on a timescale, while <span class="font-semibold">Store-Wise
+                    Sales</span>
+                performance, strategically extracted and optimized to 6,495 records from the original 632,198, achieves
+                over 90% optimization. We also provide <span class="font-semibold">Location-Based Sales
+                    Information</span>
+                to identify opportunities geographically and evaluate <span class="font-semibold">Promotional
+                    Activities</span>
+                to assess their impact on overall sales.
+            </p>
+        </div>
+    </div>
+    <hr class="h-px my-8 bg-gray-800 border-0 dark:bg-gray-700">
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-4 mt-6">Our Approach
+        </h1>
+    </div>
+
+    <img src="other_images/sys_archi.png" class="w-full h-auto rounded-lg p-4" alt="image description">
+    <hr class="h-px my-8 bg-gray-800 border-0 dark:bg-gray-700">
+    <div class="w-full max-w-6xl mx-auto p-4">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Driving Growth and Consistency!
+            </h1>
+        </div>
+        <div class="bg-gray-800 text-white rounded-lg shadow-lg p-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Accurate Sales Forecasting -->
+                <!-- <div class="flex items-start space-x-4">
+                    <i class="fas fa-chart-line text-4xl text-gray-400" style="color: #F5F2E0;"></i>
+                    <div>
+                        <h3 class="font-semibold">Accurate Sales Forecasting</h3>
+                        <p class="text-sm">The model provides accurate short-term and long-term sales forecasts,
+                            allowing
+                            for better decision-making for not just inventory management but also targeted promotions
+                            and
+                            financial planning.</p>
+                    </div>
+                </div> -->
+
+                <!-- Better Granularity -->
+                <!-- <div class="flex items-start space-x-4">
+                    <i class="fas fa-calendar-alt text-4xl text-gray-400" style="color: #F5F2E0;"></i>
+                    <div>
+                        <h3 class="font-semibold">Better Granularity</h3>
+                        <p class="text-sm">As an organization, one can choose to view and analyze sales across differing
+                            time intervals - Daily, Weekly, Monthly, Quarterly and Yearly.</p>
+                    </div>
+                </div> -->
+
+
+
+                <!-- Targeted Promotions -->
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-bullhorn text-4xl text-gray-400" style="color: #F5F2E0;"></i>
+                    <div>
+                        <h3 class="font-semibold">Targeted Promotions</h3>
+                        <p class="text-sm">The model identifies promotional impacts on sales, enabling Chicken Coop to
+                            optimize promotional strategies and increase sales during high-impact periods.</p>
+                    </div>
+                </div>
+
+                <!-- Seasonal Demand Management -->
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-sun text-4xl text-gray-400" style="color: #F5F2E0;"></i>
+                    <div>
+                        <h3 class="font-semibold">Seasonal Demand Management</h3>
+                        <p class="text-sm">The model captures seasonal sales trends (e.g., Holidays, Seasonal Weather)
+                            and
+                            adjusts strategies accordingly.</p>
+                    </div>
+                </div>
+                <!-- Optimized Resource Planning -->
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-cogs text-4xl text-gray-400" style="color: #F5F2E0;"></i>
+                    <div>
+                        <h3 class="font-semibold">Optimized Resource Planning</h3>
+                        <p class="text-sm">By forecasting demand, this allows for more efficient resource allocation.
+                        </p>
+                    </div>
+                </div>
+                <!-- Improved Decision-Making -->
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-handshake text-4xl text-gray-400" style="color: #F5F2E0;"></i>
+                    <div>
+                        <h3 class="font-semibold">Improved Decision-Making</h3>
+                        <p class="text-sm">The tool supports macro-level decisioning with reliable data for financial
+                            projections.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

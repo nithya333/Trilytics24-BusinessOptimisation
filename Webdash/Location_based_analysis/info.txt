@@ -1,0 +1,44 @@
+1_ EDA
+
+	 Info about the dataset
+
+	* The dataset has four location tags for each store namely 
+ 		1. City 
+ 	 	2. state Code, State Name
+  		3. DMA ID, DMA Name 
+  		4. Region Name
+
+	* Storewise sales analysis is made at each of these levels such as city, state, dma and region.
+
+
+3_Clustering
+
+
+	* Objective: to group cities into clusters based on similar sales patterns.
+	* Approach: K-Means clustering to segment cities based on their sales data
+	* Clustering process helps group cities into clusters based on 2 ways:
+	- Similar transaction count, net sales in USD
+	- Similar Net Sales / Store (Normalised for no of stores)
+
+	
+
+	####  Potential Use Cases:
+	This type of analysis is useful for understanding patterns across different cities and can inform business decisions like targeted marketing, 	inventory allocation, or regional strategies.
+
+	Sales Strategy: You could use this clustering to tailor marketing strategies to different city clusters. For example, cities in the same cluster may 	have similar demand patterns, so similar marketing efforts could be applied.
+
+	Resource Allocation: If some clusters are associated with high sales, you may allocate more resources (inventory, staff) to those clusters.
+
+
+4_ DMA Level Sales Optimisation
+
+
+	* A DMA (Designated Market Area) is a geographic region used in the United States commonly used in media and advertising to segment the U.S. market 	for TV viewership and ad targeting. However, DMA can also be applied to sales, marketing, and logistics analysis.
+
+	* Use linear programming to optimize resource allocation across DMAs. 
+	* Objective: The goal is to maximize the sales by optimally allocating resources (inventory) across different DMAs (Designated Market Areas), 	subject to certain constraints. Assuming we're allocating a fixed amount of inventory across DMA regions
+	* Constraints: Total inventory across all DMAs should be within a limit
+	* Method: Optimization models (like linear programming) can help determine the best allocation of resources (e.g., inventory, promotions) across 	different DMAs.
+
+
+

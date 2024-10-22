@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIML Part B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+    <div class="text-black flex justify-evenly py-3 fixed top-0 left-0 w-full shadow-md z-50 border border-gray-300"
+        style="background-color: #F5F2E0;">
+        <a href="/home.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-book text-2xl"></i>
+            <span class="text-xl">Documentation</span>
+        </a>
+        <a href="/location.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-location-dot text-2xl"></i>
+            <span class="text-xl">Location Analysis</span>
+        </a>
+        <a href="/promotion.html"
+            class="cursor-pointer p-4 w-full text-center flex items-center justify-center space-x-2 border border-gray-800 hover:bg-gray-200">
+            <i class="fa-solid fa-magnifying-glass-dollar text-2xl"></i>
+            <span class="text-xl">Promotion Analysis</span>
+        </a>
+    </div>
+
+    <div class="w-full mx-auto bg-gray-700 text-white border border-gray-200 rounded-lg shadow-lg mt-[100px]">
+        <div class="p-6">
+            <h2 class="text-2xl font-semibold text-gray-100 mb-4">1. EDA</h2>
+            <hr class="h-px my-8 bg-white border-0 ">
+            <p class="text-gray-100 text-base mb-4 font-bold">Information about the dataset</p>
+            The dataset has four location tags for each store namely:
+            <ul class="list-decimal pl-6">
+                <li>City</li>
+                <li>State Code, State Name</li>
+                <li>DMA ID, DMA Name</li>
+                <li>Region Name</li>
+            </ul>
+            <p class="text-gray-200 mt-4">Storewise sales analysis is made at each of these levels such as city, state,
+                DMA,
+                and region.</p>
+        </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">Number of Stores at each level</h2>
+
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+
+        <!-- Image 1 -->
+        <div class="text-center w-full sm:w-1/3 md:w-1/3 lg:w-1/3 p-2">
+            <img src="/Location_based_analysis/1_EDA/v_1.1_statewise_num_stores.png" alt="Image 1"
+                class="w-full h-100 object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">State wise Number of Stores</p>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="text-center w-full sm:w-1/3 md:w-1/3 lg:w-1/3 p-2">
+            <img src="/Location_based_analysis/1_EDA/v_1.2_dmawise_num_stores.png" alt="Image 2"
+                class="w-full h-100 object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">DMA wise Number of Stores</p>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="text-center w-full sm:w-1/3 md:w-1/3 lg:w-1/3 p-2">
+            <img src="/Location_based_analysis/1_EDA/v_1.3_regionwise_num_stores.png" alt="Image 3"
+                class="w-full h-100 object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Region wise Number of Stores</p>
+        </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">State Wise</h2>
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-6 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+        <table class="min-w-full table-auto border-collapse bg-white shadow-md rounded-lg">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="px-4 py-2 text-left">STATE_NAME</th>
+                    <th class="px-4 py-2 text-left">HIGHEST_AMOUNT</th>
+                    <th class="px-4 py-2 text-left">HIGHEST_AMOUNT_STORE</th>
+                    <th class="px-4 py-2 text-left">DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Alabama</td>
+                    <td class="px-4 py-2">11646.19</td>
+                    <td class="px-4 py-2">1209</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Alaska</td>
+                    <td class="px-4 py-2">17915.17</td>
+                    <td class="px-4 py-2">1225</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Arizona</td>
+                    <td class="px-4 py-2">13541.78</td>
+                    <td class="px-4 py-2">373</td>
+                    <td class="px-4 py-2">2023-12-16</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Arkansas</td>
+                    <td class="px-4 py-2">16434.53</td>
+                    <td class="px-4 py-2">1454</td>
+                    <td class="px-4 py-2">2023-12-17</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">California</td>
+                    <td class="px-4 py-2">27219.95</td>
+                    <td class="px-4 py-2">1566</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Colorado</td>
+                    <td class="px-4 py-2">20115.83</td>
+                    <td class="px-4 py-2">1144</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Connecticut</td>
+                    <td class="px-4 py-2">10867.12</td>
+                    <td class="px-4 py-2">2144</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Florida</td>
+                    <td class="px-4 py-2">15610.01</td>
+                    <td class="px-4 py-2">1589</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Georgia</td>
+                    <td class="px-4 py-2">10813.96</td>
+                    <td class="px-4 py-2">2097</td>
+                    <td class="px-4 py-2">2023-07-01</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Hawaii</td>
+                    <td class="px-4 py-2">13682.76</td>
+                    <td class="px-4 py-2">754</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Illinois</td>
+                    <td class="px-4 py-2">15134.77</td>
+                    <td class="px-4 py-2">1365</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Indiana</td>
+                    <td class="px-4 py-2">9478.43</td>
+                    <td class="px-4 py-2">1406</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Iowa</td>
+                    <td class="px-4 py-2">7987.56</td>
+                    <td class="px-4 py-2">1389</td>
+                    <td class="px-4 py-2">2020-11-21</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Kentucky</td>
+                    <td class="px-4 py-2">11989.79</td>
+                    <td class="px-4 py-2">257</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Louisiana</td>
+                    <td class="px-4 py-2">12620.23</td>
+                    <td class="px-4 py-2">133</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Maryland</td>
+                    <td class="px-4 py-2">18729.45</td>
+                    <td class="px-4 py-2">737</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Massachusetts</td>
+                    <td class="px-4 py-2">15298.85</td>
+                    <td class="px-4 py-2">1185</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Michigan</td>
+                    <td class="px-4 py-2">11533.31</td>
+                    <td class="px-4 py-2">1871</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Minnesota</td>
+                    <td class="px-4 py-2">19712.20</td>
+                    <td class="px-4 py-2">769</td>
+                    <td class="px-4 py-2">2023-12-08</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Mississippi</td>
+                    <td class="px-4 py-2">8901.65</td>
+                    <td class="px-4 py-2">168</td>
+                    <td class="px-4 py-2">2023-12-17</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Missouri</td>
+                    <td class="px-4 py-2">11519.05</td>
+                    <td class="px-4 py-2">1244</td>
+                    <td class="px-4 py-2">2023-02-17</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Nevada</td>
+                    <td class="px-4 py-2">20779.76</td>
+                    <td class="px-4 py-2">979</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">New Hampshire</td>
+                    <td class="px-4 py-2">10991.51</td>
+                    <td class="px-4 py-2">1513</td>
+                    <td class="px-4 py-2">2023-02-14</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">New Jersey</td>
+                    <td class="px-4 py-2">17861.91</td>
+                    <td class="px-4 py-2">2285</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">New Mexico</td>
+                    <td class="px-4 py-2">16313.73</td>
+                    <td class="px-4 py-2">488</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">New York</td>
+                    <td class="px-4 py-2">27009.72</td>
+                    <td class="px-4 py-2">766</td>
+                    <td class="px-4 py-2">2023-02-07</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">North Carolina</td>
+                    <td class="px-4 py-2">15261.13</td>
+                    <td class="px-4 py-2">1162</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Ohio</td>
+                    <td class="px-4 py-2">13861.10</td>
+                    <td class="px-4 py-2">155</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Oklahoma</td>
+                    <td class="px-4 py-2">12061.41</td>
+                    <td class="px-4 py-2">31</td>
+                    <td class="px-4 py-2">2023-12-17</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Oregon</td>
+                    <td class="px-4 py-2">15720.19</td>
+                    <td class="px-4 py-2">3421</td>
+                    <td class="px-4 py-2">2023-12-17</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Pennsylvania</td>
+                    <td class="px-4 py-2">11670.14</td>
+                    <td class="px-4 py-2">1993</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">South Carolina</td>
+                    <td class="px-4 py-2">14885.27</td>
+                    <td class="px-4 py-2">469</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Tennessee</td>
+                    <td class="px-4 py-2">13245.41</td>
+                    <td class="px-4 py-2">2132</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Texas</td>
+                    <td class="px-4 py-2">23740.02</td>
+                    <td class="px-4 py-2">969</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Utah</td>
+                    <td class="px-4 py-2">13940.92</td>
+                    <td class="px-4 py-2">1052</td>
+                    <td class="px-4 py-2">2023-02-12</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Virginia</td>
+                    <td class="px-4 py-2">13918.18</td>
+                    <td class="px-4 py-2">1062</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Washington</td>
+                    <td class="px-4 py-2">16286.15</td>
+                    <td class="px-4 py-2">748</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">Wisconsin</td>
+                    <td class="px-4 py-2">13300.60</td>
+                    <td class="px-4 py-2">589</td>
+                    <td class="px-4 py-2">2023-02-13</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-4 mt-6">DMA Wise</h2>
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-6 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+        <table class="min-w-full table-auto border-collapse bg-white shadow-md rounded-lg">
+            <thead class="bg-gray-800 text-white">
+                <thead>
+                    <tr class="bg-gray-900 text-white">
+                        <th class="px-4 py-2 text-left">DMA_NAME</th>
+                        <th class="px-4 py-2 text-left">NET_SALES_FINAL_USD_AMOUNT</th>
+                        <th class="px-4 py-2 text-left">HIGHEST_STORE_NUMBER</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr class="border-t">
+                    <td class="px-4 py-2">LOS ANGELES</td>
+                    <td class="px-4 py-2">4.669653e+08</td>
+                    <td class="px-4 py-2">2574</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">DALLAS-FT. WORTH</td>
+                    <td class="px-4 py-2">2.424745e+08</td>
+                    <td class="px-4 py-2">2255</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">HOUSTON</td>
+                    <td class="px-4 py-2">1.543783e+08</td>
+                    <td class="px-4 py-2">2389</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">CHICAGO</td>
+                    <td class="px-4 py-2">1.064066e+08</td>
+                    <td class="px-4 py-2">2422</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">NEW YORK</td>
+                    <td class="px-4 py-2">9.232763e+07</td>
+                    <td class="px-4 py-2">2285</td>
+                </tr>
+                <!-- Add additional rows as needed -->
+                <tr class="border-t">
+                    <td class="px-4 py-2">SPOKANE</td>
+                    <td class="px-4 py-2">1.230277e+06</td>
+                    <td class="px-4 py-2">2263</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">GRAND RAPIDS-KALMZOO-B.CRK</td>
+                    <td class="px-4 py-2">9.196171e+05</td>
+                    <td class="px-4 py-2">2414</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">NEW ORLEANS</td>
+                    <td class="px-4 py-2">6.944268e+05</td>
+                    <td class="px-4 py-2">2490</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">ROCHESTER, NY</td>
+                    <td class="px-4 py-2">2.174655e+05</td>
+                    <td class="px-4 py-2">2470</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="px-4 py-2">INDIANAPOLIS</td>
+                    <td class="px-4 py-2">2.942241e+04</td>
+                    <td class="px-4 py-2">785</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-center text-gray-700 mb-4 mt-6">Normalised Transaction Count</h2>
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+
+        <!-- Image 2 -->
+        <div class="text-center w-full sm:w-1/3 md:w-1/3 lg:w-1/3 p-2">
+            <img src="/Location_based_analysis/1_EDA/v_3.2_citywise_norm_trans.png" alt="Image 2"
+                class="w-full h-100 object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Top 10 cities with normalized transaction density</p>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="text-center w-full sm:w-1/3 md:w-1/3 lg:w-1/3 p-2">
+            <img src="/Location_based_analysis/1_EDA/v_3.3_dmawise_norm_trans.png" alt="Image 3"
+                class="w-full h-100 object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Top 10 DMAs with normalized transaction density</p>
+        </div>
+
+        <div class="text-center w-full sm:w-1/3 md:w-1/3 lg:w-1/3 p-2">
+            <img src="/Location_based_analysis/1_EDA/v_3.4_regionwise_norm_trans.png" alt="Image 3"
+                class="w-full h-100 object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Normalized Tarnsaction density by regions</p>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+
+        <!-- Image 1 -->
+        <div class="text-center w-full h-full p-2">
+            <img src="/Location_based_analysis/1_EDA/v_3.1_statewise_norm_trans.png" alt="Image 1"
+                class="w-full h-full object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Normalised Transaction Density by State</p>
+        </div>
+
+    </div>
+    <hr class="h-px my-8 bg-gray-800 border-0 dark:bg-gray-700">
+
+    <div class="w-full mx-auto bg-gray-700 text-white border border-gray-200 rounded-lg shadow-lg mt-[20px]">
+        <div class="p-6">
+            <h2 class="text-2xl font-semibold text-gray-100 mb-4">2.Geospatial Analysis</h2>
+            <hr class="h-px my-8 bg-white border-0">
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+
+        <!-- Image 1 -->
+        <div class="text-center w-full h-full p-2">
+            <img src="/Location_based_analysis/2_Geospatial_Analysis/v_4.2_citywise.png" alt="Image 1"
+                class="w-full h-full object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Top Cities</p>
+        </div>
+
+    </div>
+
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+        <iframe src="/Location_based_analysis/2_Geospatial_Analysis/trans_count_map_with_legend.html" width="100%"
+            height="600px" style="border: none;">
+            Your browser does not support iframes.
+        </iframe>
+
+    </div>
+
+    <div class="flex justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+        <iframe src="/Location_based_analysis/2_Geospatial_Analysis/norm_trans_map_with_legend.html" width="100%"
+            height="600px" style="border: none;">
+            Your browser does not support iframes.
+        </iframe>
+
+    </div>
+    <hr class="h-px my-8 bg-gray-800 border-0 dark:bg-gray-700">
+    <div class="w-full mx-auto bg-gray-700 text-white border border-gray-200 rounded-lg shadow-lg mt-[20px]">
+        <div class="p-6">
+            <h2 class="text-2xl font-semibold text-gray-100 mb-4">3.Clustering</h2>
+            <hr class="h-px my-8 bg-white border-0 ">
+            <p class="text-gray-100 text-lg mb-4 font-bold">Objective</p>
+            <p class="text-gray-200 text-base mb-4">To group cities into clusters based on similar sales patterns.</p>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">Approach</p>
+            <p class="text-gray-200 text-base mb-4">K-Means clustering is used to segment cities based on their sales
+                data. The
+                clustering process helps group cities into clusters based on two approaches:</p>
+            <ul class="list-decimal pl-6 text-gray-300 mb-4">
+                <li>Similar transaction count, net sales in USD.</li>
+                <li>Similar Net Sales / Store (Normalized for the number of stores).</li>
+            </ul>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">Potential Use Cases</p>
+            <p class="text-gray-200 text-base mb-4">This type of analysis is useful for understanding patterns across
+                different
+                cities and can inform business decisions like targeted marketing, inventory allocation, or regional
+                strategies.</p>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">Sales Strategy</p>
+            <p class="text-gray-200 text-base mb-4">You could use this clustering to tailor marketing strategies to
+                different city
+                clusters. For example, cities in the same cluster may have similar demand patterns, so similar marketing
+                efforts
+                could be applied.</p>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">Resource Allocation</p>
+            <p class="text-gray-200 text-base">If some clusters are associated with high sales, you may allocate more
+                resources
+                (inventory, staff) to those clusters.</p>
+        </div>
+    </div>
+    <div class="flex flex-col justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+
+        <!-- Image Section -->
+        <div class="text-center p-2">
+            <img src="/Location_based_analysis/3_Clustering/m_2.1_clustering_city.png" alt="Image 1"
+                class="object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Clustering Cities</p>
+        </div>
+
+        <!-- Iframe Section -->
+        <iframe src="/Location_based_analysis/3_Clustering/city_clustering_map_with_legend.html" width="100%"
+            height="600px" style="border: none;" class="mt-4">
+            Your browser does not support iframes.
+        </iframe>
+
+    </div>
+
+    <div class="flex flex-col justify-center items-center mt-8 w-full px-4 py-2 border border-gray-800 rounded-lg shadow-lg"
+        style="background-color: #F5F2E0;">
+
+        <!-- Image Section -->
+        <div class="text-center p-2">
+            <img src="/Location_based_analysis/3_Clustering/m_3.1_normalised_clustering_city.png" alt="Image 1"
+                class="object-cover rounded-lg shadow-md">
+            <p class="mt-2 text-gray-700">Normalized Clustering Cities</p>
+        </div>
+
+        <!-- Iframe Section -->
+        <iframe src="/Location_based_analysis/3_Clustering/normalised_clustering_map_with_legend.html" width="100%"
+            height="600px" style="border: none;" class="mt-4">
+            Your browser does not support iframes.
+        </iframe>
+
+    </div>
+
+
+    <hr class="h-px my-8 bg-gray-800 border-0 dark:bg-gray-700">
+    <div class="w-full mx-auto bg-gray-700 text-white border border-gray-200 rounded-lg shadow-lg mt-[20px]">
+        <div class="p-6">
+            <h2 class="text-2xl font-semibold text-gray-100 mb-4">4. DMA Resource Allocation</h2>
+            <hr class="h-px my-8 bg-white border-0">
+            <p class="text-gray-100 text-lg mb-4 font-bold">What is a DMA?</p>
+            <p class="text-gray-200 text-base mb-4">
+                A DMA (Designated Market Area) is a geographic region used in the United States commonly used in media
+                and
+                advertising to segment the U.S. market for TV viewership and ad targeting. However, DMA can also be
+                applied
+                to sales, marketing, and logistics analysis.
+            </p>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">Objective</p>
+            <p class="text-gray-200 text-base mb-4">
+                The goal is to maximize the sales by optimally allocating resources (inventory) across different DMAs
+                (Designated Market Areas), subject to certain constraints. Assuming we're allocating a fixed amount of
+                inventory across DMA regions.
+            </p>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">Constraints</p>
+            <p class="text-gray-200 text-base mb-4">
+                Total inventory across all DMAs should be within a limit.
+            </p>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">Method</p>
+            <p class="text-gray-200 text-base">
+                Optimization models (like linear programming) can help determine the best allocation of resources (e.g.,
+                inventory, promotions) across different DMAs.
+            </p>
+            <hr class="h-px my-8 bg-white border-0">
+            <p class="text-gray-100 text-lg mb-4 font-bold">1. Maximize:</p>
+            <p class="text-gray-200 text-base mb-4">
+                <span class="font-semibold">Sales</span> = Σ (Sales per unit of inventory allocated to DMA <i>i</i> ×
+                Inventory
+                allocated to DMA <i>i</i>)
+            </p>
+
+            <p class="text-gray-100 text-lg mb-4 font-bold">2. Constraint:</p>
+            <p class="text-gray-200 text-base mb-4">
+                The inventory allocated to each DMA must not exceed the inventory limit for that DMA, i.e., for each DMA
+                <i>i</i>:
+            </p>
+            <p class="text-gray-200 text-base">
+                <span class="font-semibold">0 ≤ Inventory allocated to DMA <i>i</i> ≤ Inventory limit for DMA
+                    <i>i</i></span>
+            </p>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <a href="location_forecast.html"
+            class="px-4 py-2 mt-6 text-black font-semibold rounded-lg shadow-md bg-[#F5F2E0] hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+            Analyse more on forecasts of the states of USA! Click here to know more!
+        </a>
+    </div>
+</body>
+
+</html>
